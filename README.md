@@ -60,6 +60,8 @@ and then reread with Python's OpenCV package - the OpenCV contains the HoughTran
 ![N|Solid](https://photos.google.com/share/AF1QipOi8FdfMbrKt-NlOnnJPG5ILlaUYpbbDX740Khez3u8v6cN_lDEIG8Z-Q5flunMnQ/photo/AF1QipMVliqa6C5H01fQ3FT3ME8pqHDhV2PdoPVLgfXi?key=dnRQc0Raa3ExdGF6QThMcktCOFBLdVF6MFMtWUJ3)
 
 
+![screenshot](https://github.com/Wingmore/CESD/blob/master/CESD_Documentation/pre-processing.png)
+
 
 Finally the lines can be generated using OpenCV's [Probabilistic Hough Transform](https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html). 
 
