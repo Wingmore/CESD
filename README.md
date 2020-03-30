@@ -67,7 +67,7 @@ Obviously not all the code will be explained here. This section will only explai
 ### Theory
 The theory is, whenever a "jump" occurs in the in a 1D row of the matrix `D_I` (`mat1`) current measurement, the `FG_ST` gate has to compensate and adjust the gate voltages for this jump. And so for a single row of the `FG_ST` matrix, there will be some "offset" which is at the same location as the jump in the `D_I` current. Now combining all the rows for the respective datasets, we get the following:
 
-![D_I](https://github.com/Wingmore/CESD/blob/master/CESD_Documentation/D_I.JPG) ![FG_ST](https://github.com/Wingmore/CESD/blob/master/CESD_Documentation/FG_ST.JPG)
+![D_I](https://github.com/Wingmore/CESD/blob/master/CESD_Documentation/D_I.jpg) ![FG_ST](https://github.com/Wingmore/CESD/blob/master/CESD_Documentation/FG_ST.jpg)
 
 Evidently, it is much harder to see the offset in the `FG_ST` dataset than the `D_I` dataset, which is why we can use some image processing techniques to calculate the position of these lines from the `D_I` matrix and then use this position to find where each offset is for each row of `FG_ST` matrix. In the example above, there are 15 lines, so each row has 14-15 "jumps" which correspond to 14-15 offset locations.
 
@@ -114,6 +114,7 @@ and then reread with Python's OpenCV package - the OpenCV contains the HoughTran
         edges = cv2.Canny(thresh1,50,150,apertureSize = 3)
         fill = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
 
+The output from the following processes (Top Left to Bottom Right): Grayscale conversion, Threshold, Canny Edge Detection, Morphological Closing.
 ![screenshot](https://github.com/Wingmore/CESD/blob/master/CESD_Documentation/pre-processing.png)
 
 
