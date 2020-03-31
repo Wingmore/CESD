@@ -161,7 +161,7 @@ class Cap_Extract():
         
         # Parameters
         hough_thresh = 60   #default 60. increase for less lines, decrease for more
-        gray_thresh = 177   #default 177. decrease for fainter lines
+        gray_thresh = 127   #default 127. decrease for fainter lines
         min_lines = 10  #default 10. Minimum number of lines you expect for a diagram
         
         # plt.imshow((mat), interpolation='nearest', aspect='auto', origin='lower')
@@ -186,7 +186,7 @@ class Cap_Extract():
             # Convert to grayscale,threshold and create edges
             kernel = np.ones((5,5),np.uint8)
             gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-            ret, thresh1 = cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
+            ret, thresh1 = cv2.threshold(gray,gray_thresh,255,cv2.THRESH_BINARY)
             edges = cv2.Canny(thresh1,50,150,apertureSize = 3)
             fill = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
         
