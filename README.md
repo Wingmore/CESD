@@ -356,3 +356,6 @@ The version created in MATLAB may still be used as it largely performs the same 
 
 Anyhow, I have included the files for the interest of any. To use, launch MATLAB, type `appdesigner` in the console. After the Appdesigner app opens, find the `main.mlapp` file and open it, and then press the big green `RUN` button in the ribbon or press `f5`. 
 
+## Contact
+Edwin Sun
+email: edwin.sun486@gmail.com
